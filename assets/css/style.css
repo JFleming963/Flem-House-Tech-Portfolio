@@ -72,7 +72,7 @@ a {
 
 /* -------- Header Section ---------------- */
 
-header {
+header, footer {
     background-color: var(--header-color);
     height: 100px;
     display: flex;
@@ -122,7 +122,7 @@ header nav ul {
     height: auto;
     max-width: 724px;
     max-height: 200px;
-    min-width: 420px;
+    min-width: 225px;
     border: var(--acc-border);
     border-radius: var(--border-radius);
     outline: var(--test-border);
@@ -130,6 +130,7 @@ header nav ul {
 
 #primary-project-card img {
     width: 100%;
+    min-width: 225px;
     height: auto;
     object-fit: fill;
     border-radius: var(--border-radius-img);
@@ -164,6 +165,11 @@ header nav ul {
 
 #contact-container nav ul {
     list-style-type: none;
+}
+
+/* ----------- Footer Section ---------------- */
+footer {
+    justify-content: center;
 }
 
 /* ----------- Responsive Layout ------------ */
@@ -203,6 +209,7 @@ header nav ul {
 
     .section-container {
         border-left: none;
+        justify-content: center;
     }
 
 }
