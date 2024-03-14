@@ -8,7 +8,7 @@
 --border-radius: 15px;
 --border-radius-img: 11px;
 --acc-color: black;
-/* --test-border: 2px solid red; */
+--test-border: 2px solid red;
 }
 
 body {
@@ -27,24 +27,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     line-height: 1.2em;
-}
-
-/* -------- Header Section ---------------- */
-
-header {
-    background-color: var(--header-color);
-    height: 65px;
-    display: flex;
-    padding: 1em;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header nav ul {
-    display: flex;
-    justify-content: space-between;
-    min-width: 300px;
-    list-style-type: none;
+    outline: var(--test-border);
 }
 
 h2 {
@@ -53,39 +36,71 @@ h2 {
     text-align: right;
 }
 
+ul {
+    padding: 0;
+}
+
 a {
     text-decoration: none;
     color: var(--font-color);
 }
+
+/* -------- Class Selectors --------------- */
 
 .section-heading {
     width: 20%;
     outline: var(--test-border);
 }
 
-/* --------- About Section -------------- */
-
-#about-section {
+.main-sections {
     display: flex;
     flex-direction: row;
     align-items: start;
-    margin: 40px 0;
+    padding: 40px 0;
     outline: var(--test-border);
 }
 
-#about-text-and-photo {
+.section-container {
     width: 70%;
     display: flex;
     border-left: var(--left-border);
+    flex-wrap: wrap;
+    justify-content: start;
+    padding: 0 40px;
     outline: var(--test-border);
 }
+
+/* -------- Header Section ---------------- */
+
+header {
+    background-color: var(--header-color);
+    height: 100px;
+    display: flex;
+    padding: 0 1em;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    outline: var(--test-border);
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+    min-width: 300px;
+    list-style-type: none;
+    outline: var(--test-border);
+}
+
+/* --------- About Section -------------- */
 
 #about-pic {
     border: var(--acc-border);
     border-radius: var(--border-radius);
-    margin: 15px 40px;
+    margin: 15px 30px;
     width: 200px;
     height: 200px;
+    float: left;
 }
 
 #about-text {
@@ -93,36 +108,21 @@ a {
 }
 
 /* --------- Portfolio Section ----------------- */
+
+
+
 #portfolio-section img {
     border-radius: var(--border-radius-img);
-}
-
-#portfolio-section {
-    display: flex;
-    flex-direction: row;
-    align-items: start;
-    margin: 40px 0;
-    outline: var(--test-border);
-}
-
-#project-cards{
-    width: 70%;
-    display: flex;
-    border-left: var(--left-border);
-    flex-wrap: wrap;
-    justify-content: start;
-    padding: 0 40px;
-    /* margin: 15px 40px; */
-    outline: var(--test-border);
-    
 }
 
 #primary-project-card {
     position: relative;
     margin-top: 15px;
     width: 100%;
+    height: auto;
     max-width: 724px;
     max-height: 200px;
+    min-width: 420px;
     border: var(--acc-border);
     border-radius: var(--border-radius);
     outline: var(--test-border);
@@ -130,6 +130,9 @@ a {
 
 #primary-project-card img {
     width: 100%;
+    height: auto;
+    object-fit: fill;
+    border-radius: var(--border-radius-img);
 }
 
 .secondary-project-cards {
@@ -159,21 +162,47 @@ a {
 
 /* ----------- Contact Section ----------------- */
 
-#contact-section {
-    display: flex;
-    flex-direction: row;
-    align-items: start;
-    margin: 40px 0;
-    outline: var(--test-border);
-}
-
-#contact-container {
-    width: 70%;
-    display: flex;
-    border-left: var(--left-border);
-    outline: var(--test-border);
-}
-
 #contact-container nav ul {
     list-style-type: none;
+}
+
+/* ----------- Responsive Layout ------------ */
+
+@media screen and (max-width: 820px){
+
+    h1, h2, h3, h4, h5, h6{
+        font-weight: 400;
+        line-height: 1em;
+    }
+
+    h1 {
+        margin-top: .25em;
+        margin-bottom: 0;
+    }
+
+    h2 {
+        text-decoration: underline;
+    }
+
+    header {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+    }
+
+    .main-sections {
+        flex-direction: column;
+        padding: 0;
+        border-bottom: var(--left-border);
+    }
+    
+    .section-heading {
+        padding: 0 40px;
+        width: auto;
+    }
+
+    .section-container {
+        border-left: none;
+    }
+
 }
