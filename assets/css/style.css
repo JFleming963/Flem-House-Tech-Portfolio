@@ -27,24 +27,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     line-height: 1.2em;
-}
-
-/* -------- Header Section ---------------- */
-
-header {
-    background-color: var(--header-color);
-    height: 65px;
-    display: flex;
-    padding: 1em;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header nav ul {
-    display: flex;
-    justify-content: space-between;
-    min-width: 300px;
-    list-style-type: none;
+    outline: var(--test-border);
 }
 
 h2 {
@@ -58,6 +41,9 @@ a {
     color: var(--font-color);
 }
 
+
+/* -------- Class Selectors --------------- */
+
 .section-heading {
     width: 20%;
     outline: var(--test-border);
@@ -68,6 +54,28 @@ a {
     flex-direction: row;
     align-items: start;
     margin: 40px 0;
+    outline: var(--test-border);
+}
+
+/* -------- Header Section ---------------- */
+
+header {
+    background-color: var(--header-color);
+    height: 100px;
+    display: flex;
+    padding: 0 1em;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    outline: var(--test-border);
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+    min-width: 300px;
+    list-style-type: none;
     outline: var(--test-border);
 }
 
@@ -104,7 +112,6 @@ a {
     flex-wrap: wrap;
     justify-content: start;
     padding: 0 40px;
-    /* margin: 15px 40px; */
     outline: var(--test-border);
     
 }
@@ -171,9 +178,14 @@ a {
         line-height: 1em;
     }
 
+    h1 {
+        margin: .25;
+    }
+
     header {
         flex-direction: column;
         height: auto;
+        width: 100%;
     }
 
     .main-sections {
