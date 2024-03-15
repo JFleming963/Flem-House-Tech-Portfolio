@@ -31,7 +31,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
-    /* margin-left: 50px; */
     margin-right: 15px;
     text-align: right;
 }
@@ -72,7 +71,7 @@ a {
 
 /* -------- Header Section ---------------- */
 
-header, footer {
+header {
     background-color: var(--header-color);
     height: 100px;
     display: flex;
@@ -97,7 +96,7 @@ header nav ul {
 #about-pic {
     border: var(--acc-border);
     border-radius: var(--border-radius);
-    margin: 15px 30px;
+    margin: 0 30px 30px 15px;
     width: 200px;
     height: 200px;
     float: left;
@@ -109,21 +108,20 @@ header nav ul {
 
 /* --------- Portfolio Section ----------------- */
 
-
-
 #portfolio-section img {
     border-radius: var(--border-radius-img);
 }
 
 #primary-project-card {
     position: relative;
-    margin-top: 15px;
-    width: 100%;
+    margin-top: 24px;
+    /* width: 100%; */
+    width: auto;
     height: auto;
     max-width: 724px;
     max-height: 200px;
     min-width: 225px;
-    border: var(--acc-border);
+    /* border: var(--acc-border); */
     border-radius: var(--border-radius);
     outline: var(--test-border);
 }
@@ -132,8 +130,8 @@ header nav ul {
     width: 100%;
     min-width: 225px;
     height: auto;
-    object-fit: fill;
-    border-radius: var(--border-radius-img);
+    border: var(--acc-border);
+    border-radius: var(--border-radius);
 }
 
 .secondary-project-cards {
@@ -169,7 +167,15 @@ header nav ul {
 
 /* ----------- Footer Section ---------------- */
 footer {
+    background-color: var(--header-color);
+    height: 100px;
+    display: flex;
+    padding: 0 1em;
     justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    outline: var(--test-border);
 }
 
 /* ----------- Responsive Layout ------------ */
@@ -188,6 +194,7 @@ footer {
 
     h2 {
         text-decoration: underline;
+        margin-bottom: 0;
     }
 
     header {
@@ -210,6 +217,15 @@ footer {
     .section-container {
         border-left: none;
         justify-content: center;
+        margin: auto;
     }
 
+    #about-pic {
+        margin-left: 0;
+    }
+
+    #contact-container nav {
+        margin-left: 22px;
+    }
+    
 }
