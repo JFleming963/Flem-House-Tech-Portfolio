@@ -224,6 +224,8 @@ footer {
         margin-left: 0;
     }
 
-
+    #contact-container nav {
+        margin-left: 22px;
+    }
     
 }
